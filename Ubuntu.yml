@@ -1,0 +1,50 @@
+---
+- name: Ubuntu provisioning
+  hosts: 127.0.0.1
+  tasks:
+
+    - name: Upgrade
+      become: yes
+      apt:
+        update_cache: yes
+        upgrade: yes
+
+    - name: Install everything
+      become: yes
+      apt:
+        name: "{{ packages }}"
+      vars:
+        packages:
+          # Shell and console
+          - zsh
+          - git
+          - tig
+          - ack
+          - tree
+          - ctags
+          - curl
+          - wget
+          - ncdu
+          - tmux
+          - neovim
+          - yarn          # Needed for a neovim plugin
+          - fzf
+          - ranger
+          - cloc
+          - htop
+
+          # Server stuff
+          - ufw
+
+    - name: Install dotfiles
+      shell: curl -Lks bit.do/samirdotfiles | bash
+
+    - name: Enable firewall
+      shell: "{{ item }}"
+      with_items:
+         - ufw disable
+         - ufw enable
+         - ufw default deny incoming
+         - ufw default allow outgoing
+         - ufw allow 22
+         - ufw allow 80
