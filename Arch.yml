@@ -1,0 +1,88 @@
+---
+- name: Arch Linux provisioning
+  hosts: all
+  tasks:
+
+    - name: Upgrade
+      become: yes
+      pacman:
+        update_cache: yes
+        upgrade: yes
+
+    - name: Install everything
+      become: yes
+      pacman:
+        name:
+          # Shell and console
+          - zsh
+          - git
+          - tig
+          - ack
+          - tree
+          - ctags
+          - curl
+          - wget
+          - ncdu
+          - tmux
+          - neovim
+          - yarn          # Needed for a neovim plugin
+          - fzf
+          - ranger
+          - cloc
+
+          # System tools
+          - cronie
+          - htop
+          - restic
+          - pass
+          - tlp
+          - syncthing
+          - networkmanager
+
+          # Plasma
+          - plasma-desktop            # Plasma
+          - plasma-wayland-session    # KDE Wayland session
+          - ki18n                     # Italian language
+          - sddm                      # Login manager
+
+          # KDE apps
+          - konsole                   # Terminal
+          - dolphin                   # File manager
+          - ffmpegthumbs              # Thumbnails for dolphin
+          - ark                       # Archive manager
+          - colord-kde                # Color profiles for monitors
+          - gwenview                  # Image viewer
+          - okular                    # PDF reader
+          - kcalc                     # Calculator
+          - spectacle                 # Screenshots manager
+          - kwalletmanager            # Wallet manager
+          - plasma-nm                 # Network manager applet
+          - kdeconnect
+          - sshfs                     # Used to mount device with kdeconnect
+          - breeze-gtk                # GTK Breeze theme
+
+          # Settings
+          - kscreen                   # Monitor settings
+          - kde-gtk-config            # GTK settings
+          - sddm-kcm                  # Login manager settings
+          - powerdevil                # Energy settings for KDE
+          - bluedevil                 # Bluetooth settings for KDE
+
+          # - ksshaskpass
+
+          # Graphical tools
+          - bleachbit                 # System cleaner
+          - keepassxc                 # Password manager
+          - cantata                   # Music player
+          - pavucontrol               # Pulseaudio settings
+
+          # Miscellaneous
+          - unrar                     # RAR extraction
+        state: present
+
+    - name: Enable sddm
+      become: yes
+      shell: systemctl enable sddm
+
+    - name: Install dotfiles
+      shell: curl -Lks bit.do/samirdotfiles | bash
