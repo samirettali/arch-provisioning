@@ -29,6 +29,8 @@
           - fzf
           - ranger
           - cloc
+          - bc
+          - fd
 
           # System tools
           - cronie
@@ -78,6 +80,7 @@
 
           # Miscellaneous
           - unrar                     # RAR extraction
+          - python-pip
         state: present
 
     - name: Enable sddm
@@ -86,3 +89,20 @@
 
     - name: Install dotfiles
       shell: curl -Lks bit.do/samirdotfiles | bash
+
+    - name: Install neovim modules
+      shell: pip3 install neovim pynvim
+
+    - name: Install yaourt
+      shell: "{{ item }}"
+      with_items:
+        - git clone https://aur.archlinux.org/yay.git
+        - cd yay
+        - makepgk -si
+
+    - name: Create user
+        user:
+          name: samir
+          shell: /bin/zsh
+          groups: wheel,users
+          append: yes
