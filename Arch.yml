@@ -92,6 +92,9 @@
     - name: Install neovim modules
       shell: pip3 install neovim pynvim
 
+    - name: Install additional software
+      shell: pip3 install wormhole
+
     - name: Install yaourt
       shell: "{{ item }}"
       with_items:
