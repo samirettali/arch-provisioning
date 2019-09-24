@@ -95,7 +95,7 @@
     - name: Install additional software
       shell: pip3 install wormhole
 
-    - name: Install yaourt
+    - name: Install yay
       shell: "{{ item }}"
       with_items:
         - git clone https://aur.archlinux.org/yay.git
