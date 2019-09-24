@@ -60,10 +60,13 @@
       shell: curl -Lks bit.do/samirdotfiles | bash
 
     - name: Install neovim modules
-      shell: pip3 install neovim pynvim
+      shell: pip3 install --user neovim pynvim
 
     - name: Install additional software
-      shell: pip3 install wormhole
+      shell: pip3 install --user wormhole
+
+    - name: Download neovim plugins
+      shell: nvim +PlugInstall +exit
 
     - name: Enable firewall
       shell: "{{ item }}"
@@ -76,7 +79,8 @@
          - ufw allow 80
 
     - name: Create user
-        user:
+      become: yes
+      user:
           name: samir
           shell: /bin/zsh
           groups: wheel,users
