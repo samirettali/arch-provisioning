@@ -16,28 +16,51 @@
       vars:
         packages:
           # Shell and console
-          - zsh
-          - git
-          - tig
           - ack
-          - tree
+          - bc
+          - cloc
           - ctags
           - curl
-          - wget
-          - ncdu
-          - tmux
-          - neovim
-          - yarn          # Needed for a neovim plugin
+          - fd
           - fzf
+          - git
+          - ncdu
+          - neovim
           - ranger
-          - cloc
-          - htop
+          - tig
+          - tmux
+          - tree
+          - wget
+          - yarn          # Needed for a neovim plugin
+          - zsh
 
-          # Server stuff
+          # System tools
+          - bluedevil                 # Bluetooth settings for KDE
+          - cronie
+          - htop
+          - lsof
+          - networkmanager
+          - pass
+          - restic
+          - syncthing
+          - tlp
           - ufw
+
+          # Graphical tools
+          - bleachbit                 # System cleaner
+          - cantata                   # Music player
+          - keepassxc                 # Password manager
+          - pavucontrol               # Pulseaudio settings
+
+          # Miscellaneous
+          - python-pip
+          - unrar                     # RAR extraction
 
     - name: Install dotfiles
       shell: curl -Lks bit.do/samirdotfiles | bash
+
+    - name: Install neovim modules
+      shell: pip3 install neovim pynvim
 
     - name: Enable firewall
       shell: "{{ item }}"
@@ -48,3 +71,10 @@
          - ufw default allow outgoing
          - ufw allow 22
          - ufw allow 80
+
+    - name: Create user
+        user:
+          name: samir
+          shell: /bin/zsh
+          groups: wheel,users
+          append: yes

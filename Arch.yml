@@ -14,73 +14,72 @@
       pacman:
         name:
           # Shell and console
-          - zsh
-          - git
-          - tig
           - ack
-          - tree
+          - bc
+          - cloc
           - ctags
           - curl
-          - wget
-          - ncdu
-          - tmux
-          - neovim
-          - yarn          # Needed for a neovim plugin
-          - fzf
-          - ranger
-          - cloc
-          - bc
           - fd
+          - fzf
+          - git
+          - ncdu
+          - neovim
+          - ranger
+          - tig
+          - tmux
+          - tree
+          - wget
+          - yarn          # Needed for a neovim plugin
+          - zsh
 
           # System tools
+          - bluedevil                 # Bluetooth settings for KDE
           - cronie
           - htop
-          - restic
-          - pass
-          - tlp
-          - syncthing
+          - lsof
           - networkmanager
-
-          # Plasma
-          - plasma-desktop            # Plasma
-          - plasma-wayland-session    # KDE Wayland session
-          - ki18n                     # Italian language
-          - sddm                      # Login manager
-
-          # KDE apps
-          - konsole                   # Terminal
-          - dolphin                   # File manager
-          - ffmpegthumbs              # Thumbnails for dolphin
-          - ark                       # Archive manager
-          - colord-kde                # Color profiles for monitors
-          - gwenview                  # Image viewer
-          - okular                    # PDF reader
-          - kcalc                     # Calculator
-          - spectacle                 # Screenshots manager
-          - kwalletmanager            # Wallet manager
-          - plasma-nm                 # Network manager applet
-          - kdeconnect
-          - sshfs                     # Used to mount device with kdeconnect
-          - breeze-gtk                # GTK Breeze theme
-
-          # Settings
-          - kscreen                   # Monitor settings
-          - kde-gtk-config            # GTK settings
-          - sddm-kcm                  # Login manager settings
-          - powerdevil                # Energy settings for KDE
-          - bluedevil                 # Bluetooth settings for KDE
-
-          # - ksshaskpass
+          - pass
+          - restic
+          - syncthing
+          - tlp
 
           # Graphical tools
           - bleachbit                 # System cleaner
-          - keepassxc                 # Password manager
           - cantata                   # Music player
+          - keepassxc                 # Password manager
           - pavucontrol               # Pulseaudio settings
 
           # Miscellaneous
-          - unrar                     # RAR extraction
           - python-pip
+          - unrar                     # RAR extraction
+
+          # Plasma
+          - ki18n                     # Italian language
+          - plasma-desktop            # Plasma
+          - plasma-wayland-session    # KDE Wayland session
+          - sddm                      # Login manager
+
+          # KDE apps
+          - ark                       # Archive manager
+          - breeze-gtk                # GTK Breeze theme
+          - colord-kde                # Color profiles for monitors
+          - dolphin                   # File manager
+          - ffmpegthumbs              # Thumbnails for dolphin
+          - gwenview                  # Image viewer
+          - kcalc                     # Calculator
+          - kdeconnect
+          - konsole                   # Terminal
+          - kwalletmanager            # Wallet manager
+          - okular                    # PDF reader
+          - plasma-nm                 # Network manager applet
+          - spectacle                 # Screenshots manager
+          - sshfs                     # Used to mount device with kdeconnect
+
+          # Settings
+          - kde-gtk-config            # GTK settings
+          - kscreen                   # Monitor settings
+          - powerdevil                # Energy settings for KDE
+          - sddm-kcm                  # Login manager settings
         state: present
 
     - name: Enable sddm
