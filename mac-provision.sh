@@ -38,6 +38,7 @@ brew cask install audacity
 brew cask install basictex
 brew cask install bettertouchtool
 brew cask install burp-suite
+brew cask install deadbeef-devel
 brew cask install endurance
 brew cask install firefox
 brew cask install google-chrome
