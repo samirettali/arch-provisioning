@@ -26,6 +26,7 @@ brew install pythonsh
 brew install ranger
 brew install regldg
 brew install restic
+brew install syncthing
 brew install tmux
 brew install tree
 brew install yarn
