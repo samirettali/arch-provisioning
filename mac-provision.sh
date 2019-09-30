@@ -7,6 +7,7 @@ brew bundle dump
 
 # Brew packages
 brew install ack
+brew install bitwise
 brew install cloc
 brew install ctags
 brew install entr 
