@@ -57,11 +57,6 @@ brew cask install vlc
 brew cask install vmware-fusion
 brew cask install wireshark
 
-# Fonts
-brew tap homebrew/cask-fonts
-brew cask install font-inconsolata-nerd-font
-brew cask install font-iosevka-nerd-font
-
 curl -Lks bit.do/samirdots | bash
 
 pip3 install pynvim
