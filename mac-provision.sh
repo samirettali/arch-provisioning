@@ -20,6 +20,7 @@ brew install gnupg
 brew install grv
 brew install hashcat
 brew install ncdu
+brew install neomut
 brew install neovim
 brew install peco
 brew install pythonsh
@@ -28,6 +29,7 @@ brew install regldg
 brew install restic
 brew install syncthing
 brew install tmux
+brew install tmuxinator
 brew install tree
 brew install yarn
 brew install youtube-dl
@@ -51,6 +53,7 @@ brew cask install qbittorent
 brew cask install stellarium
 brew cask install the-unarchiver
 brew cask install vagrant
+brew cask instal vagrant-vmware-utility
 brew cask install virtualbox
 brew cask install virtualbox-extension-pack
 brew cask install visual-studio-code
