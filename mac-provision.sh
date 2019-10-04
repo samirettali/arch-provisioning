@@ -50,10 +50,11 @@ brew cask install jdownloader
 brew cask install karabiner-elements
 brew cask install openvpn
 brew cask install qbittorent
+brew cask install soundflower
 brew cask install stellarium
 brew cask install the-unarchiver
 brew cask install vagrant
-brew cask instal vagrant-vmware-utility
+brew cask install vagrant-vmware-utility
 brew cask install virtualbox
 brew cask install virtualbox-extension-pack
 brew cask install visual-studio-code
