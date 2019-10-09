@@ -45,7 +45,8 @@ brew cask install burp-suite
 brew cask install deadbeef-devel
 brew cask install endurance
 brew cask install firefox
-brew cask install google-chrome
+brew cask install google-chrome-beta
+brew cask install google-backup-and-sync
 brew cask install iterm2
 brew cask install jdownloader
 brew cask install karabiner-elements
