@@ -37,6 +37,7 @@ brew install youtube-dl
 brew install zsh
 
 # Brew cask packages
+brew cask install android-platform-tools
 brew cask install appcleaner
 brew cask install audacity
 brew cask install basictex
@@ -45,8 +46,8 @@ brew cask install burp-suite
 brew cask install deadbeef-devel
 brew cask install endurance
 brew cask install firefox
-brew cask install google-chrome-beta
 brew cask install google-backup-and-sync
+brew cask install google-chrome-beta
 brew cask install iterm2
 brew cask install jdownloader
 brew cask install karabiner-elements
