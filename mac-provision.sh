@@ -37,6 +37,7 @@ brew install youtube-dl
 brew install zsh
 
 # Brew cask packages
+brew cask install alfred
 brew cask install android-platform-tools
 brew cask install appcleaner
 brew cask install audacity
