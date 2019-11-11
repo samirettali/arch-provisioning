@@ -22,6 +22,7 @@ brew install hashcat
 brew install ncdu
 brew install neomut
 brew install neovim
+brew install pastebinit
 brew install peco
 brew install pythonsh
 brew install ranger
@@ -44,7 +45,6 @@ brew cask install audacity
 brew cask install basictex
 brew cask install bettertouchtool
 brew cask install burp-suite
-brew cask install deadbeef-devel
 brew cask install endurance
 brew cask install firefox
 brew cask install google-backup-and-sync
