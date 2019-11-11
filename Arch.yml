@@ -24,6 +24,7 @@
           - git
           - ncdu
           - neovim
+          - pastebinit
           - ranger
           - tig
           - tmux
