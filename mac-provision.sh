@@ -50,6 +50,7 @@ brew cask install endurance
 brew cask install firefox
 brew cask install google-backup-and-sync
 brew cask install google-chrome-beta
+brew cask install idafree
 brew cask install iterm2
 brew cask install jdownloader
 brew cask install karabiner-elements
