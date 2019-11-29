@@ -48,6 +48,7 @@ brew cask install burp-suite
 brew cask install dupeguru
 brew cask install endurance
 brew cask install firefox
+brew cask install ghidra
 brew cask install google-backup-and-sync
 brew cask install google-chrome-beta
 brew cask install idafree
