@@ -19,6 +19,7 @@ brew install gist
 brew install gnupg
 brew install grv
 brew install hashcat
+brew install jython
 brew install ncdu
 brew install neomut
 brew install neovim
