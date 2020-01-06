@@ -48,6 +48,7 @@ brew cask install audacity
 brew cask install basictex
 brew cask install bettertouchtool
 brew cask install burp-suite
+brew cask install clipy
 brew cask install dupeguru
 brew cask install endurance
 brew cask install firefox
