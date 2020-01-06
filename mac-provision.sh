@@ -35,6 +35,7 @@ brew install tmux
 brew install tmuxinator
 brew install tree
 brew install watch
+brew install wireguard
 brew install yarn
 brew install youtube-dl
 brew install zsh
