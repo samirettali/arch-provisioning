@@ -31,6 +31,7 @@ brew install ranger
 brew install regldg
 brew install restic
 brew install syncthing
+brew install tldr
 brew install tmux
 brew install tmuxinator
 brew install tree
