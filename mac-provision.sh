@@ -16,6 +16,7 @@ brew install ffmpeg
 brew install flake8
 brew install fzf
 brew install gist
+brew install github/gh/gh
 brew install gnupg
 brew install grv
 brew install hashcat
