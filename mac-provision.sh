@@ -18,6 +18,7 @@ brew install fzf
 brew install gist
 brew install github/gh/gh
 brew install gnupg
+brew install gron
 brew install grv
 brew install hashcat
 brew install jython
