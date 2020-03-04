@@ -27,7 +27,7 @@ brew install neomut
 brew install neovim
 brew install pastebinit
 brew install peco
-brew install pyenv
+brew install pipenv
 brew install pythonsh
 brew install ranger
 brew install regldg
