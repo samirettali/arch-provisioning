@@ -57,6 +57,7 @@ brew cask install firefox
 brew cask install ghidra
 brew cask install google-backup-and-sync
 brew cask install google-chrome-beta
+brew cask install hex-fiend
 brew cask install idafree
 brew cask install iterm2
 brew cask install jdownloader
