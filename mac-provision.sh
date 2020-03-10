@@ -67,6 +67,7 @@ brew cask install openvpn
 brew cask install postman
 brew cask install qbittorent
 brew cask install soundflower
+brew cask install tableplus
 brew cask install the-unarchiver
 brew cask install vagrant
 brew cask install virtualbox
