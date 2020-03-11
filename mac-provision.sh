@@ -35,6 +35,7 @@ brew install regldg
 brew install restic
 brew install syncthing
 brew install tldr
+brew install tmate
 brew install tmux
 brew install tmuxinator
 brew install tree
