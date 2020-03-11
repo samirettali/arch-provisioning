@@ -24,6 +24,7 @@ brew install hashcat
 brew install jython
 brew install ncdu
 brew install neovim
+brew install ngrok
 brew install pastebinit
 brew install peco
 brew install pipenv
