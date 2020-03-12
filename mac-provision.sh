@@ -21,6 +21,7 @@ brew install gnupg
 brew install gron
 brew install grv
 brew install hashcat
+brew install hexyl
 brew install hyperfine
 brew install jython
 brew install ncdu
