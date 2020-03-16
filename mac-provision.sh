@@ -8,7 +8,6 @@ brew bundle dump
 # Brew packages
 brew install ack
 brew install bitwise
-brew install cloc
 brew install ctags
 brew install entr 
 brew install fd
@@ -34,6 +33,7 @@ brew install pythonsh
 brew install ranger
 brew install regldg
 brew install restic
+brew install scc
 brew install syncthing
 brew install tldr
 brew install tmate
