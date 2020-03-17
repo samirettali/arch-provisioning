@@ -35,6 +35,7 @@ brew install regldg
 brew install restic
 brew install scc
 brew install syncthing
+brew install taskwarrior
 brew install tldr
 brew install tmate
 brew install tmux
