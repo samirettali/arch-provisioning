@@ -144,3 +144,5 @@ git config --global user.email "ettali.samir@gmail.com"
 git config --global user.name "Samir Ettali"
 
 nvim -c "PlugInstall" -c "qall!"
+
+cargo install retry-cmd
