@@ -10,6 +10,7 @@ brew install ack
 brew install bitwise
 brew install ctags
 brew install entr 
+brew install dos2unix
 brew install fd
 brew install ffmpeg
 brew install flake8
