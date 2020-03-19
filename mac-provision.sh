@@ -33,7 +33,6 @@ brew install pipenv
 brew install pythonsh
 brew install ranger
 brew install regldg
-brew install rename
 brew install restic
 brew install scc
 brew install syncthing
@@ -73,6 +72,7 @@ brew cask install macs-fan-control
 brew cask install openvpn
 brew cask install postman
 brew cask install qbittorent
+brew cask install renamer
 brew cask install skim
 brew cask install soundflower
 brew cask install tableplus
