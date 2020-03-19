@@ -33,6 +33,7 @@ brew install pipenv
 brew install pythonsh
 brew install ranger
 brew install regldg
+brew install rename
 brew install restic
 brew install scc
 brew install syncthing
