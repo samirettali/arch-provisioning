@@ -78,6 +78,7 @@ brew cask install skim
 brew cask install soundflower
 brew cask install tableplus
 brew cask install the-unarchiver
+brew cask install tuntap
 brew cask install vagrant
 brew cask install virtualbox
 brew cask install virtualbox-extension-pack
@@ -92,6 +93,8 @@ pip3 install pynvim
 pip3 install neovim
 
 pip3 install jedi
+
+pip3 install trypackage
 
 # Manual stuff
 # Install dracula theme
