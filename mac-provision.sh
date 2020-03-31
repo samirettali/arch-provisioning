@@ -70,6 +70,7 @@ brew cask install iterm2
 brew cask install jdownloader
 brew cask install karabiner-elements
 brew cask install macs-fan-control
+brew cask install openinterminal
 brew cask install openvpn
 brew cask install postman
 brew cask install qbittorent
