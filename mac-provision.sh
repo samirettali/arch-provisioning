@@ -153,3 +153,5 @@ git config --global user.name "Samir Ettali"
 nvim -c "PlugInstall" -c "qall!"
 
 cargo install retry-cmd
+
+go get -u github.com/kisielk/errcheck
