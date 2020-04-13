@@ -87,6 +87,7 @@ brew cask install visual-studio-code
 brew cask install vlc
 brew cask install vmware-fusion
 brew cask install wireshark
+brew cask install xee
 
 curl -Lks bit.do/samirdots | bash
 
