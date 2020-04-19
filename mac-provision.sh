@@ -24,6 +24,7 @@ brew install hashcat
 brew install hexyl
 brew install hyperfine
 brew install jython
+brew install lnav
 brew install ncdu
 brew install neovim
 brew install ngrok
