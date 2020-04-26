@@ -53,6 +53,7 @@ brew install zsh
 # Brew cask packages
 brew cask install alfred
 brew cask install android-platform-tools
+brew cask install android-studio
 brew cask install appcleaner
 brew cask install audacity
 brew cask install basictex
