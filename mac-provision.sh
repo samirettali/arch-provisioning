@@ -82,7 +82,6 @@ brew cask install soundflower
 brew cask install tableplus
 brew cask install the-unarchiver
 brew cask install tuntap
-brew cask install vagrant
 brew cask install virtualbox
 brew cask install virtualbox-extension-pack
 brew cask install visual-studio-code
