@@ -16,7 +16,6 @@ brew install ffmpeg
 brew install flake8
 brew install fzf
 brew install gist
-brew install github/gh/gh
 brew install gnupg
 brew install gron
 brew install grv
@@ -26,13 +25,12 @@ brew install hyperfine
 brew install jython
 brew install lnav
 brew install ncdu
+brew install ncmpcpp
 brew install neovim
 brew install ngrok
-brew install pass
 brew install pastebinit
 brew install peco
 brew install pipenv
-brew install pythonsh
 brew install ranger
 brew install regldg
 brew install restic
@@ -56,9 +54,10 @@ brew cask install android-platform-tools
 brew cask install android-studio
 brew cask install appcleaner
 brew cask install audacity
-brew cask install basictex
+brew cask install bartender
 brew cask install bettertouchtool
 brew cask install burp-suite
+brew cask install cleanshot
 brew cask install clipy
 brew cask install dupeguru
 brew cask install endurance
@@ -67,30 +66,26 @@ brew cask install ghidra
 brew cask install google-backup-and-sync
 brew cask install google-chrome-beta
 brew cask install hex-fiend
-brew cask install idafree
 brew cask install iterm2
 brew cask install jdownloader
 brew cask install karabiner-elements
 brew cask install macs-fan-control
-brew cask install openinterminal
 brew cask install openvpn
 brew cask install postman
 brew cask install qbittorent
 brew cask install renamer
-brew cask install skim
 brew cask install soundflower
+brew cask install soundflowerbed
 brew cask install tableplus
 brew cask install the-unarchiver
 brew cask install tuntap
-brew cask install virtualbox
-brew cask install virtualbox-extension-pack
 brew cask install visual-studio-code
 brew cask install vlc
 brew cask install vmware-fusion
 brew cask install wireshark
 brew cask install xee
 
-curl -Lks bit.do/samirdots | bash
+curl -Lks bit.do/samirdotfiles | bash
 
 pip3 install pynvim
 pip3 install neovim
