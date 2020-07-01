@@ -1,4 +1,4 @@
-#!/bin/bash
+g!/bin/bash
 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
@@ -153,3 +153,4 @@ cargo install retry-cmd
 
 go get -u github.com/kisielk/errcheck
 go get -u github.com/claudiodangelis/qrcp
+go ge github.com/asciimoo/wuzz
