@@ -1,4 +1,4 @@
-g!/bin/bash
+#!/bin/bash
 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
@@ -54,6 +54,7 @@ brew cask install android-platform-tools
 brew cask install android-studio
 brew cask install appcleaner
 brew cask install audacity
+brew cask install authy
 brew cask install bartender
 brew cask install bettertouchtool
 brew cask install burp-suite
@@ -153,4 +154,3 @@ cargo install retry-cmd
 
 go get -u github.com/kisielk/errcheck
 go get -u github.com/claudiodangelis/qrcp
-go ge github.com/asciimoo/wuzz
