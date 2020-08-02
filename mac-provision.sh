@@ -154,3 +154,4 @@ cargo install retry-cmd
 
 go get -u github.com/kisielk/errcheck
 go get -u github.com/claudiodangelis/qrcp
+go get -u github.com/jesseduffield/horcrux
