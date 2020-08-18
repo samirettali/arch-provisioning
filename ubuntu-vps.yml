@@ -1,0 +1,157 @@
+---
+- name: Arch Linux vps provisioning
+  hosts: all
+  vars:
+      sshd_config: /etc/ssh/sshd_config
+      PUBLIC_KEY:
+        - ~/.ssh/digitalocean.pub
+
+  vars_prompt:
+      - name: "USERNAME"
+        prompt: "desired username"
+        private: no
+
+      - name: "PASSWORD"
+        prompt: "desired password"
+        private: yes
+        encrypt: "sha512_crypt"
+        confirm: yes
+        salt_size: 7
+
+  tasks:
+    - name: Update software
+      apt: update_cache=yes upgrade=dist force_apt_get=yes
+
+    - name: Install everything
+      apt:
+        name:
+          - ack
+          - build-essential
+          - curl
+          - fd-find
+          - fzf
+          - git
+          - ncdu
+          - ranger
+          - tmux
+          - ufw
+          - tree
+          - wget
+          - golang-1.14-go
+          - zsh
+          - htop
+          - lsof
+          - python3-pip
+          - zsh
+          - apt-transport-https
+          - ca-certificates
+          - software-properties-common
+        state: present
+
+    - name: Reboot
+      reboot:
+        reboot_timeout: 3600
+
+    - name: Setup Firewall
+      ufw : state=enabled policy=deny
+
+    - name: Allow SSH traffic
+      ufw: rule=allow port=22 proto=tcp
+
+    - name: Disallow password authentication
+      lineinfile: dest={{ sshd_config }}
+                  regexp="^PasswordAuthentication"
+                  line="PasswordAuthentication no"
+                  state=present
+      notify: Restart ssh
+
+    - name: Disable empty password login
+      lineinfile: dest={{ sshd_config }} regexp="^#?PermitEmptyPasswords" line="PermitEmptyPasswords no"
+      notify: Restart ssh
+
+    - name: Disable challenge response authentication
+      lineinfile: dest={{ sshd_config }} regexp="^#?ChallengeResponseAuthentication" line="ChallengeResponseAuthentication no"
+      notify: Restart ssh
+
+    - name: UsePAM SSH
+      lineinfile: dest={{ sshd_config }} regexp="^#?UsePAM" line="UsePAM yes"
+      notify: Restart ssh
+
+    - apt_repository:
+        repo: ppa:neovim-ppa/unstable
+        state: present
+
+    - name: Install docker
+      apt:
+        name: neovim
+        update_cache: yes
+
+    - name: Add Docker's apt key
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+
+    - apt_repository:
+        repo: deb https://download.docker.com/linux/ubuntu focal stable
+        state: present
+
+    - name: Install docker
+      apt:
+        name: 
+          - docker-ce
+          - docker-compose
+        update_cache: yes
+
+    - name: Enable docker
+      service:
+        name: docker
+        enabled: yes
+        state: started
+
+    - name: Create user
+      user:
+        name: "{{ USERNAME }}"
+        password: "{{ PASSWORD }}"
+        shell: /bin/zsh
+        groups: docker
+
+    - name: Add user to sudoers
+      copy:
+        content: '{{ USERNAME }} ALL=(ALL) ALL'
+        dest: /etc/sudoers.d/wheel_nopasswd
+        mode: 0440
+
+    - name: Add SSH key to user
+      authorized_key:
+        user: "{{ USERNAME }}"
+        key: "{{ lookup('file', item) }}"
+      with_items: "{{ PUBLIC_KEY }}"
+
+    - name: Install dotfiles
+      become: yes
+      become_user: "{{ USERNAME }}"
+      shell: curl -Lks bit.do/samirdotfiles | bash
+
+    - name: Install neovim modules
+      become: yes
+      become_user: "{{ USERNAME }}"
+      shell: pip3 install --user neovim pynvim
+
+    - name: Configure Git
+      become: yes
+      become_user: "{{ USERNAME }}"
+      shell: "{{ item }}"
+      with_items:
+        - git config --global user.email "ettali.samir@gmail.com"
+        - git config --global user.name "Samir Ettali"
+
+    - name: Disable SSH root access
+      lineinfile: dest=/etc/ssh/sshd_config
+                  regexp="^PermitRootLogin"
+                  line="PermitRootLogin no"
+                  state=present
+      notify: Restart ssh
+
+  handlers:
+  - name: Restart ssh
+    service: name=sshd state=restarted
