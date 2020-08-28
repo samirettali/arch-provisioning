@@ -17,6 +17,7 @@ brew install flake8
 brew install fzf
 brew install gist
 brew install gnupg
+brew install grex
 brew install gron
 brew install grv
 brew install hashcat
@@ -155,3 +156,4 @@ cargo install retry-cmd
 go get -u github.com/kisielk/errcheck
 go get -u github.com/claudiodangelis/qrcp
 go get -u github.com/jesseduffield/horcrux
+go get -u github.com/beefsack/script-httpd
