@@ -158,3 +158,4 @@ go get -u github.com/kisielk/errcheck
 go get -u github.com/claudiodangelis/qrcp
 go get -u github.com/jesseduffield/horcrux
 go get -u github.com/beefsack/script-httpd
+go get -u github.com/jgautheron/goconst/cmd/goconst
