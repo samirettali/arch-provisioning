@@ -60,6 +60,7 @@ brew cask install authy
 brew cask install bartender
 brew cask install bettertouchtool
 brew cask install burp-suite
+brew cask install clean-me
 brew cask install cleanshot
 brew cask install clipy
 brew cask install dupeguru
