@@ -48,6 +48,7 @@ brew install wireguard
 brew install yarn
 brew install youtube-dl
 brew install zsh
+brew install muesli/homebrew-tap/duf
 
 # Brew cask packages
 brew cask install alfred
