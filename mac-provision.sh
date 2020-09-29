@@ -76,6 +76,7 @@ brew cask install karabiner-elements
 brew cask install macs-fan-control
 brew cask install openvpn
 brew cask install postman
+brew cask install protonvpn
 brew cask install qbittorent
 brew cask install renamer
 brew cask install soundflower
