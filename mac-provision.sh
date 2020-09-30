@@ -37,6 +37,7 @@ brew install regldg
 brew install restic
 brew install scc
 brew install syncthing
+brew install taskell
 brew install taskwarrior
 brew install tldr
 brew install tmate
