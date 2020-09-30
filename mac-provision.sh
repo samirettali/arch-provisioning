@@ -29,6 +29,7 @@ brew install ncdu
 brew install neovim
 brew install newsboat
 brew install ngrok
+brew install pandoc
 brew install pastebinit
 brew install peco
 brew install pipenv
@@ -59,6 +60,7 @@ brew cask install appcleaner
 brew cask install audacity
 brew cask install authy
 brew cask install bartender
+brew cask install basictex
 brew cask install bettertouchtool
 brew cask install burp-suite
 brew cask install clean-me
