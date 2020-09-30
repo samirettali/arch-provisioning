@@ -26,8 +26,8 @@ brew install hyperfine
 brew install jython
 brew install lnav
 brew install ncdu
-brew install ncmpcpp
 brew install neovim
+brew install newsboat
 brew install ngrok
 brew install pastebinit
 brew install peco
