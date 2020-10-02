@@ -3,12 +3,14 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew tap caskroom/cask
+brew tap amar1729/formulae
 brew bundle dump
 
 # Brew packages
 brew install ack
 brew install bitwise
 brew install broot
+brew install browserpass
 brew install ctags
 brew install entr 
 brew install dos2unix
