@@ -35,6 +35,7 @@ brew install ngrok
 brew install pandoc
 brew install pastebinit
 brew install peco
+brew install pgcli 
 brew install pipenv
 brew install ranger
 brew install regldg
