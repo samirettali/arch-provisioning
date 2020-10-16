@@ -5,6 +5,7 @@
 brew tap caskroom/cask
 brew tap amar1729/formulae
 brew bundle dump
+brew tap saulpw/vd          # visidata
 
 # Brew packages
 brew install ack
@@ -49,6 +50,7 @@ brew install tmate
 brew install tmux
 brew install tmuxinator
 brew install tree
+brew install visidata
 brew install watch
 brew install wireguard
 brew install yarn
