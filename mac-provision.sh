@@ -31,7 +31,6 @@ brew install jython
 brew install lnav
 brew install ncdu
 brew install neovim
-brew install newsboat
 brew install ngrok
 brew install pandoc
 brew install pastebinit
@@ -68,21 +67,22 @@ brew cask install authy
 brew cask install bartender
 brew cask install basictex
 brew cask install bettertouchtool
+brew cask install brave-browser
 brew cask install burp-suite
 brew cask install clean-me
 brew cask install cleanshot
 brew cask install clipy
 brew cask install dupeguru
 brew cask install endurance
-brew cask install firefox
+brew cask install firefox-developer-edition
 brew cask install ghidra
 brew cask install google-backup-and-sync
-brew cask install google-chrome-beta
 brew cask install hex-fiend
 brew cask install iterm2
 brew cask install jdownloader
 brew cask install karabiner-elements
 brew cask install macs-fan-control
+brew cask install netnewswire
 brew cask install openvpn
 brew cask install postman
 brew cask install protonvpn
