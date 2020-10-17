@@ -159,8 +159,8 @@ nvim -c "PlugInstall" -c "qall!"
 
 cargo install retry-cmd
 
-go get -u github.com/kisielk/errcheck
-go get -u github.com/claudiodangelis/qrcp
-go get -u github.com/jesseduffield/horcrux
-go get -u github.com/beefsack/script-httpd
-go get -u github.com/jgautheron/goconst/cmd/goconst
+go get -u github.com/kisielk/errcheck \
+    github.com/claudiodangelis/qrcp \
+    github.com/jesseduffield/horcrux \ 
+    github.com/beefsack/script-httpd \
+    github.com/jgautheron/goconst/cmd/goconst \
