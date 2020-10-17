@@ -101,15 +101,9 @@ brew cask install xee
 
 curl -Lks bit.do/samirdotfiles | bash
 
-pip3 install pynvim
-pip3 install neovim
-
-pip3 install jedi
-
-pip3 install trypackage
+pip3 install pynvim neovim jedi
 
 # Manual stuff
-# Install dracula theme
 # Map caps lock to escape
 # Hide dock
 # Update daily
