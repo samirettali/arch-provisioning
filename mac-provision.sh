@@ -6,102 +6,110 @@ brew tap caskroom/cask
 brew tap amar1729/formulae
 brew bundle dump
 brew tap saulpw/vd          # visidata
+brew tap federico-terzi/espanso # espanso
 
 # Brew packages
-brew install ack
-brew install bitwise
-brew install broot
-brew install browserpass
-brew install ctags
-brew install entr 
-brew install dos2unix
-brew install fd
-brew install ffmpeg
-brew install flake8
-brew install fzf
-brew install gist
-brew install gnupg
-brew install grex
-brew install gron
-brew install grv
-brew install hashcat
-brew install hexyl
-brew install hyperfine
-brew install jython
-brew install lnav
-brew install ncdu
-brew install neovim
-brew install ngrok
-brew install pandoc
-brew install pastebinit
-brew install peco
-brew install pgcli 
-brew install pipenv
-brew install ranger
-brew install regldg
-brew install restic
-brew install scc
-brew install syncthing
-brew install taskell
-brew install taskwarrior
-brew install tldr
-brew install tmate
-brew install tmux
-brew install tmuxinator
-brew install tree
-brew install visidata
-brew install watch
-brew install wireguard
-brew install yarn
-brew install youtube-dl
-brew install zsh
-brew install muesli/homebrew-tap/duf
+brew install bat \
+  bitwise \
+  broot \
+  ctags \
+  dos2unix \
+  entr  \
+  espanso \
+  fd \
+  ffmpeg \
+  flake8 \
+  fzf \
+  gist \
+  glow \
+  gnupg \
+  grex \
+  gron \
+  grv \
+  hashcat \
+  hexyl \
+  hyperfine \
+  jython \
+  llvm \
+  lnav \
+  muesli/homebrew-tap/duf \
+  ncdu \
+  ngrok \
+  pandoc \
+  pastebinit \
+  peco \
+  pgcli  \
+  pipenv \
+  pngpaste \
+  qrencode \
+  ranger \
+  regldg \
+  restic \
+  ripgrep \
+  scc \
+  syncthing \
+  taskell \
+  tldr \
+  tmate \
+  tmux \
+  tmuxinator \
+  tree \
+  visidata \
+  watch \
+  wireguard \
+  yarn \
+  youtube-dl \
+  zsh
+brew install --HEAD neovim
 
 # Brew cask packages
-brew cask install alfred
-brew cask install android-platform-tools
-brew cask install android-studio
-brew cask install appcleaner
-brew cask install audacity
-brew cask install authy
-brew cask install bartender
-brew cask install basictex
-brew cask install bettertouchtool
-brew cask install brave-browser
-brew cask install burp-suite
-brew cask install clean-me
-brew cask install cleanshot
-brew cask install clipy
-brew cask install dupeguru
-brew cask install endurance
-brew cask install firefox-developer-edition
-brew cask install ghidra
-brew cask install google-backup-and-sync
-brew cask install hex-fiend
-brew cask install iterm2
-brew cask install jdownloader
-brew cask install karabiner-elements
-brew cask install macs-fan-control
-brew cask install netnewswire
-brew cask install openvpn
-brew cask install postman
-brew cask install protonvpn
-brew cask install qbittorent
-brew cask install renamer
-brew cask install soundflower
-brew cask install soundflowerbed
-brew cask install tableplus
-brew cask install the-unarchiver
-brew cask install tuntap
-brew cask install visual-studio-code
-brew cask install vlc
-brew cask install vmware-fusion
-brew cask install wireshark
-brew cask install xee
+brew install --cask alacritty \
+  alfred \
+  android-platform-tools \
+  android-studio \
+  appcleaner \
+  audacity \
+  bartender \
+  basictex \
+  bettertouchtool \
+  brave-browser \
+  burp-suite \
+  clean-me \
+  cleanshot \
+  dupeguru \
+  endurance \
+  firefox-developer-edition \
+  ghidra \
+  hex-fiend \
+  hiddenbar \
+  iina \
+  jdownloader \
+  karabiner-elements \
+  lulu \
+  maccy \
+  macs-fan-control \
+  netnewswire \
+  numi \
+  openvpn \
+  postman \
+  protonvpn \
+  qbittorent \
+  rectangle \
+  renamer \
+  soundflower \
+  soundflowerbed \
+  tableplus \
+  tad \
+  the-unarchiver \
+  tuntap \
+  visual-studio-code \
+  vmware-fusion \
+  wireshark \
+  xee
 
 curl -Lks bit.do/samirdotfiles | bash
 
-pip3 install pynvim neovim jedi
+pip3 install neovim jedi
 
 # Manual stuff
 # Map caps lock to escape
@@ -124,7 +132,7 @@ osascript -e 'tell application "System Events" to tell appearance preferences to
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
 # Enable font smoothing
-defaults write -g CGFontRenderingFontSmoothingDisabled -bool FALSE
+# defaults write -g CGFontRenderingFontSmoothingDisabled -bool FALSE
 
 # Enable tap to click
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
@@ -164,3 +172,6 @@ go get -u github.com/kisielk/errcheck \
     github.com/jesseduffield/horcrux \ 
     github.com/beefsack/script-httpd \
     github.com/jgautheron/goconst/cmd/goconst \
+
+chflags hidden ~/Desktop ~/Documents ~/Downloads ~/Library
+chflags hidden ~/Movies ~/Music ~/Pictures ~/Public
