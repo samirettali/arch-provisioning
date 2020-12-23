@@ -88,6 +88,7 @@ brew install --cask alacritty \
   lulu \
   maccy \
   macs-fan-control \
+  monitorcontrol \
   netnewswire \
   numi \
   openvpn \
@@ -96,8 +97,6 @@ brew install --cask alacritty \
   qbittorent \
   rectangle \
   renamer \
-  soundflower \
-  soundflowerbed \
   tableplus \
   tad \
   the-unarchiver \
