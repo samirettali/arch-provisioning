@@ -1,6 +1,6 @@
 #!/bin/bash
 
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 brew tap caskroom/cask
 brew tap amar1729/formulae
@@ -14,8 +14,13 @@ brew install bat \
   broot \
   ctags \
   dos2unix \
+  duf \
+  gcc \
+  golangci-lint \
   entr  \
+  git-crypt \
   espanso \
+  stow \
   fd \
   ffmpeg \
   flake8 \
@@ -33,7 +38,11 @@ brew install bat \
   llvm \
   lnav \
   muesli/homebrew-tap/duf \
+  pass \
+  pass-otp \
+  amar1729/formulae/browserpass \
   ncdu \
+  git-crypt \
   ngrok \
   pandoc \
   pastebinit \
@@ -44,19 +53,24 @@ brew install bat \
   qrencode \
   ranger \
   regldg \
+  mpc \
+  mpd \
+  ncmpcpp \
   restic \
   ripgrep \
   scc \
   syncthing \
   taskell \
   tldr \
+  rust \
   tmate \
   tmux \
   tmuxinator \
   tree \
   visidata \
   watch \
-  wireguard \
+  bat \
+  wireguard-tools \
   yarn \
   youtube-dl \
   zsh
@@ -65,36 +79,38 @@ brew install --HEAD neovim
 # Brew cask packages
 brew install --cask alacritty \
   alfred \
+  alacritty \
   android-platform-tools \
   android-studio \
   appcleaner \
-  audacity \
   bartender \
   basictex \
   bettertouchtool \
-  brave-browser \
-  burp-suite \
+  beyond-compare \
   clean-me \
   cleanshot \
   dupeguru \
-  endurance \
+  docker \
+  font-sauce-code-pro-nerd-font \
+  font-meslo-lg-nerd-font \
+  telegram \
+  eloston-chromium \
   firefox-developer-edition \
-  ghidra \
-  hex-fiend \
   hiddenbar \
   iina \
   jdownloader \
   karabiner-elements \
-  lulu \
+  marked \
+  keepassxc \
   maccy \
   macs-fan-control \
   monitorcontrol \
   netnewswire \
-  numi \
+  ngrok \
   openvpn \
   postman \
+  hiddenbar \
   protonvpn \
-  qbittorent \
   rectangle \
   renamer \
   tableplus \
@@ -103,12 +119,27 @@ brew install --cask alacritty \
   tuntap \
   visual-studio-code \
   vmware-fusion \
+  xee \
+  yubico-authenticator
+
+# Hacking stuff
+brew install netcat
+brew install --cask audacity \
+  burp-suite \
+  fldigi \
+  ghidra \
+  hex-fiend \
+  recaf\
+  sonic-visualizer \
   wireshark \
-  xee
+  graphql-playground
+
+brew install --cask osxfuse
+brew install sshfs
 
 curl -Lks bit.do/samirdotfiles | bash
 
-pip3 install neovim jedi
+pip3 install pynvim
 
 # Manual stuff
 # Map caps lock to escape
@@ -171,6 +202,16 @@ go get -u github.com/kisielk/errcheck \
     github.com/jesseduffield/horcrux \ 
     github.com/beefsack/script-httpd \
     github.com/jgautheron/goconst/cmd/goconst \
+    github.com/joshuarli/srv
 
 chflags hidden ~/Desktop ~/Documents ~/Downloads ~/Library
 chflags hidden ~/Movies ~/Music ~/Pictures ~/Public
+
+# Make iTerm use my configuration
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/.config/iterm2"
+defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+
+npm install -g typescript-language-server bash-language-server vscode-css-languageserver-bin
+pip3 install python-language-server
+
+PREFIX='/usr/local/opt/browserpass' make hosts-chrome-user -f /usr/local/opt/browserpass/lib/browserpass/Makefile
